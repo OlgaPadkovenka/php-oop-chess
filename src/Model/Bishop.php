@@ -3,7 +3,7 @@
 namespace App\Model;
 
 use AbstractModel;
-use PDO;
+
 
 class Bishop extends AbstractModel
 {
@@ -25,15 +25,5 @@ class Bishop extends AbstractModel
     ) {
         $this->id = $id;
         $this->name = $name;
-    }
-
-    static public function  findAll()
-    {
-
-        // Configure la connexion à la base de données
-        $databaseHandler = new PDO("mysql:host=localhost;dbname=chess", 'root', 'root');
-        $statement = $databaseHandler->query('SELECT * FROM `bishop`');
-        $bishopDate = $statement->fetchAll();
-        //dd($bishopDate);
     }
 }

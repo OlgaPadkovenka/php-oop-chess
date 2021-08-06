@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+
+use AbstractModel;
 
 class Rook extends AbstractModel
 {

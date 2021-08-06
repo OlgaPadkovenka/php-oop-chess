@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+
+use AbstractModel;
 
 class Queen extends AbstractModel
 {
@@ -17,7 +20,7 @@ class Queen extends AbstractModel
 
     public function __construct(
         ?int $id,
-        string $name,
+        string $name = "",
     ) {
         $this->id = $id;
         $this->name = $name;

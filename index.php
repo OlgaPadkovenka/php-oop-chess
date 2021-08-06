@@ -1,5 +1,15 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
+
+use App\AbstractModel;
+use App\Model\Bishop;
+use App\Model\King;
+use App\Model\Knight;
+use App\Model\Pawn;
+use App\Model\Queen;
+use App\Model\Rook;
+
+//dd();
 ?>
 
 <!DOCTYPE html>

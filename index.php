@@ -42,18 +42,64 @@ require_once __DIR__ . '/vendor/autoload.php';
             </td>
         </tr>-->
 
-        <?php for ($x = 0; $x < 8; $x++) : { ?>
+
+        <!-- start x line-->
+        <?php for ($line = 0; $line < 8; $line++) : { ?>
                 <?php echo "<tr>"; ?>
 
-                <?php for ($y = 0; $y < 8; $y++) : { ?>
-                        <?php echo "<td>" ?>
-                        <?php echo "</td>"; ?>
+                <!-- start y case-->
+                <?php for ($case = 0; $case < 8; $case++) : { ?>
+
+                        <!-- start if y case-->
+                        <?php if ($case % 2 == 0) : { ?>
+
+                                <!-- start if x line-->
+                                <?php if ($line % 2 == 0) : { ?>
+
+                                        <?php echo '<td style="background-color: #FFCE9E">' ?>
+                                        <?php echo 'Case' ?>
+                                        <?php echo '</td>'; ?>
+
+                                    <?php }
+                                else : { ?>
+
+                                        <?php echo '<td style="background-color: #D18B47">' ?>
+                                        <?php echo 'Case' ?>
+                                        <?php echo '</td>'; ?>
+
+                                    <?php } ?>
+                                <?php endif ?>
+
+                                <!-- start else case -->
+                            <?php }
+                        else : { ?>
+                                <!-- end else case -->
+
+                                <?php if ($line % 2 == 0) : { ?>
+                                        <?php echo '<td style="background-color: #D18B47">' ?>
+                                        <?php echo 'Case' ?>
+                                        <?php echo '</td>'; ?>
+
+                                    <?php }
+                                else : { ?>
+                                        <?php echo '<td style="background-color: #FFCE9E">' ?>
+                                        <?php echo 'Case' ?>
+                                        <?php echo '</td>'; ?>
+                                    <?php   } ?>
+                                <?php endif ?>
+
+                            <?php   } ?>
+                        <?php endif ?>
+                        <!-- end if y case-->
+
                     <?php   } ?>
                 <?php endfor ?>
+                <!-- end y case -->
 
                 <?php echo "</tr>"; ?>
             <?php   } ?>
         <?php endfor ?>
+        <!-- end x line -->
     </table>
 </body>
 
